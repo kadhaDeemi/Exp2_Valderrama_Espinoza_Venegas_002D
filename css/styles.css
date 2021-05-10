@@ -1,0 +1,197 @@
+body {  
+    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+}
+
+
+img{
+
+    display:block;
+
+    margin:auto;
+    }
+#backgroundhead{
+    background-color: goldenrod;
+    padding: 0.5px;
+}
+
+.color{
+        color:white;
+}
+h1{
+    color:white;
+    text-align: center; 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 350%;
+  }
+  /* diseño de los botones*/
+.button{
+    background:#000000;
+    color: #ffffff ;
+    display: inline-block;
+    font-size: 130%;
+    margin: 20px;
+    padding: 15px 15px;
+    text-align: center;
+    width: 200px;
+    text-decoration: none;
+    box-shadow: 0px 3px 0px #696969;
+
+}
+.button span{
+margin-right: 8px;
+}
+/*Colores*/
+.button.black{
+background: #212121;
+box-shadow: 0px 3px 0px #696969  ;
+}
+/*tamaños*/
+.button.medium {
+width: 350px;
+}
+.button.large {
+width: 400px;
+}
+/*Efecto*/
+.button.radius {    
+border-radius: 50px;
+}
+/*Efecto de oscuridad*/
+.button:hover {
+box-shadow: 0px 0px 0px;
+padding-top: 7px;
+}
+
+h2{
+    color:black;
+    text-align: center; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 350%;
+    text-decoration: underline goldenrod;
+}
+
+
+
+h3{
+    color:black;
+     text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 350%;
+    text-decoration: underline goldenrod;
+
+}
+p{
+    
+    text-align: justify;
+    font-size: 200%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+} 
+
+.tamaño{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 350%;
+    color:whitesmoke;
+    text-decoration: none;
+    text-shadow:  0.1em 0.0em #333;
+}
+
+.fondo{
+    background: #daa520;
+    color: #ffffff;
+    text-align: justify;
+}
+
+.fondoo{    
+    background: #B88E23;
+}
+
+.tamaño2{
+    font-size: 50%;
+}
+.copy{
+    font-size: medium;
+    text-align: center;
+    color: black;
+    display: inline-block;
+}
+
+.galeria img {
+    box-shadow: 0 8px 10px -4px rgba(0,0,0,.6);
+    border-radius: 15px;
+}
+
+.materialbox-caption {
+    bottom: 30px;
+    right: 0;
+    width: 40%;
+    height: auto;
+    padding: 10px;
+    margin: auto;
+    background: #000;
+    box-shadow: 5px 5px #fff;
+    font-size: 20px;
+    color: #fff;
+    line-height: 28px;
+}
+
+.galeria .col {
+    margin-bottom: 20px;
+}
+
+
+.navbar {
+    overflow: hidden;
+    background-color: goldenrod;
+    position: sticky; 
+    top: 0;
+    width: 100%; 
+  }
+  
+ 
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+  }
+  
+  
+  .navbar a:hover {
+    background:black;
+    color:blue;
+  }
+  
+  /* Main content */
+  .main {
+    margin-top: 50px; 
+  }
+
+  /*Imagenes juntas*/
+ figure{    
+     margin: 0;
+     display: inline-block;
+     border: 1px;
+     position: relative;
+ }
+
+.der img{
+    border-radius: 20px;
+    float: right;
+    margin-left: 30px;
+}
+
+.izq img{
+    border-radius: 20px;
+    float: left;
+    margin-right: 30px;
+}
+
+.justifi {
+    text-align: justify;
+}
+
+
+
+
