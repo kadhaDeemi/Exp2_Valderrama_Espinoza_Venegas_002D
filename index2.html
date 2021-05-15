@@ -12,6 +12,20 @@
         <link rel="stylesheet" type="text/css" href="css/styles.css">
         <link href="css/styles.css" type="text/css" rel="stylesheet">
         <link rel="stylesheet" href="css/fonts.css">
+        <link rel="stylesheet" type="text/css" href="alertifyjs/css/alertify.css">
+	   <link rel="stylesheet" type="text/css" href="alertifyjs/css/themes/default.css">
+
+	<script src="jquery-3.2.1.min.js"></script>
+	<script src="alertifyjs/alertify.js"></script>
+     <script type="text/javascript">
+
+		$(document).ready(function(){
+			
+			$('#ejecuta').click(function(){			
+				alertify.alert('Mensaje de ayuda de Medipets', 'Si el precio del producto se encuentra en rojo, quiere decir que no está disponible.',  function(){ alertify.success('Espero haberte ayudado :)'); }) ;
+			});
+		})
+	</script>
 
     </head>
     <body>
@@ -90,6 +104,11 @@
               </div>
         </div>
       </main>
+
+      <button id="ejecuta"><img src="img/Perrio.png">¿Necesitas ayuda?</button>
+    
+
+    <hr>
       <div class="row">
           <div class="col-xl-4 fondo" >
             <h5>Veterinaria </h5> 
