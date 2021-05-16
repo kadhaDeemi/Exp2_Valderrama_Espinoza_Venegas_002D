@@ -484,3 +484,16 @@ header label:hover {
     background: transparent;
     color: #000;
 }
+
+
+.error-control {
+    border: 1px solid red;
+}
+
+.error {
+    color: red;
+    width: 300px;
+    font-size: 0.8em;
+    margin-top: -5px;
+    margin-bottom: 5px;
+}

@@ -7,12 +7,85 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
         <link rel="stylesheet" type="text/css" href="css/styles.css">
         <link href="css/styles.css" type="text/css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
     <title>Iniciar Sesion</title>
+
+    <script>
+        $(function() {
+            $("#Login").validate({
+                rules: {    
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    contraseña: "required"
+                },
+            messages: {
+                email: {
+                    required: 'Ingresa tu correo electrónico',
+                    email: 'Formato de correo no válido'
+                },
+                contraseña: {
+                    required: 'Ingresa una contraseña',
+                    minlength: 'Caracteres insuficientes'
+                }
+            }
+                    
+            });
+        });
+
+        $(function(){
+            $("#Registrarse").validate({
+                rules: {
+                    nombre: "required",
+                    apellido: "required",
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    contraseña: "required",
+                    contraseña2: {
+                        required: true,
+                        equalTo: "#contraseña"
+                    }   
+                    
+                },
+            messages: {
+                nombre:{
+                    required: 'Ingrese su nombre',
+                    minlength: 'Cantidad de caracteres insuficiente'
+                },
+                apellido:{
+                    required: 'Ingrese sus apellidos',
+                    minlength: 'Caracteres insuficientes'
+                },
+                email: {
+                    required: 'Ingresa tu correo electrónico',
+                    email: 'Formato de correo no válido'
+                },
+                contraseña: {
+                    required: 'Ingresa una contraseña',
+                    minlength: 'Caracteres insuficientes'
+                },
+                contraseña2: {
+                    required: 'Reingresa la contraseña',
+                    equalTo: 'Las contraseñas ingresadas no coinciden',
+                    minlength: 'Caracteres insuficientes'
+
+                }
+            }
+            })
+        })
+
+    </script>
+
 </head>
 <body>
 
     <main>
-        <img  src ="img/logo_large.png" width="350px"  height= "85" >
+        <a href="index.html">
+        <img  src ="img/logo_large.png" width="350px"  height= "85" ></a>
     <div class="contenedorTodo">
         <div class="cajaTrasera">
             <div class="cajaTraseraLogin">
@@ -29,20 +102,20 @@
 
         <div class="Contenedor-Login-Register">
             <!--Formulario de iniciar sesion-->
-            <form action="" class="Formulario-Login">
+            <form action="index.html" id="Login" class="Formulario-Login">
                 <h2>Iniciar sesion</h2>
-                <input type="text" placeholder="Correo Electronico">
-                <input type="password" placeholder="Contraseña">
+                <input type="text" name="email" placeholder="Correo Electronico">
+                <input type="password" name="contraseña" placeholder="Contraseña">
                 <button>Entrar</button>
             </form>
             <!--Formulario registro-->
-            <form action="" class="formulario-Register">
+            <form action="index4.html" id="Registrarse" class="formulario-Register">
                 <h2>Regístrarse</h2>
-                <input type="text" placeholder="Nombres">
-                <input type="text" placeholder="Apellidos">
-                <input type="text" placeholder="Correo Electronico">
-                <input type="password" placeholder="Contraseña">
-                <input type="password" placeholder="Confirmar Contraseña">
+                <input type="text" name="nombre" minlength="3" placeholder="Nombres">
+                <input type="text" name="apellido" minlength="10" placeholder="Apellidos">
+                <input type="text" name="email" placeholder="Correo Electronico">
+                <input type="password" id="contraseña" name="contraseña" minlength="9" placeholder="Contraseña">
+                <input type="password" name="contraseña2" minlength="9" placeholder="Confirmar Contraseña">
                 <button>Registrarse</button>
             </form>
         </div>
