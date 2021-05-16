@@ -76,16 +76,18 @@ padding-top: 7px;
     top: 99px;
     right: 100px;
     text-align: center;*/
-    margin-left: 1385px;
-    position: absolute;
-    display: inline; 
+    text-decoration: none;
+    display: block; 
     width: 130px;
     padding: 10px 10px;
     border: 2px solid #fff;
     background-color: transparent;
     font-size: 14px ;
     font-weight: 400;
+    margin-top: 5px;
+    margin-right: 5px;
     cursor: pointer;
+    float: right;
     color: #fff;
     outline: none;
     transition: all 400ms;
@@ -231,53 +233,6 @@ p{
 .justifi {
     text-align: justify;
 }
-/*
-
-.hamburguesa{
-    top: 20px;;
-        width: 100px;
-        height: 10px;
-        background-color: #222;
-        position: relative;
-}
-.hamburguesa::before,
-.hamburguesa::after{   
-    top: 20px; 
-    width: 100px;
-    height: 10px;
-    background-color: #222;
-    position: absolute;
-    content: '';
-}
-
-.hamburguesa::before{   
-    top: -20px;
-
-}
-.hamburguesa::after{    
-    top: 20px;
-}
-
-.hamburguesa,
-.hamburguesa::after,
-.hamburguesa::before{   
-    transition: all ease-out .8s;
-}
-
-.hamburguesa.animacion::before{ 
-    top: 0;
-    transform: rotate(-45deg);
-}
-
-.hamburguesa.animacion::after{  
-    top:0;
-    transform: rotate(45deg)
-}
-.hamburguesa.animacion{
-    background-color: transparent;
-}
-*/
-
 
 /*Iniciar sesion - registrar*/
 
@@ -398,6 +353,50 @@ p{
 .formulario-Register{   
     display: none;
 }
+header {
+    width: 100%;
+    background-color: goldenrod;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    position: sticky;
+}
+#btnMenu {
+    display: none;
+}
+
+header label {
+    display: none;
+    width: 60px;
+    padding: 10px;
+    color: #fff;
+    font-size: 30px;
+    transition: all 500ms ease;
+}
+
+header label:hover {
+    background-color: #333;
+    cursor: pointer;
+}
+.menu ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+.menu li a{
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 15px 20px;
+    transition: all 800ms ease;
+}
+
+.menu li a:hover{
+    background-color: #696969;
+
+}
+
 /*Responsive*/
 @media screen and (max-width: 850px){
     main {
@@ -423,6 +422,30 @@ p{
     }
     .Contenedor-Login-Register form{ 
         position: relative;
+    }
+    header label {
+        display: block;
+    }
+    .menu {
+        position: absolute;
+        background: goldenrod;
+        width: 100%;
+        margin-top: -200%;
+        transition: all 1000ms ease;
+        
+    }
+
+    .menu ul {
+    flex-direction: column;
+    border-top: 1px solid #fff;
+    
+    }
+
+    #btnMenu {
+        cursor: pointer;
+    }
+    #btnMenu:checked ~ .menu{
+        margin: 0;
     }
 }
 
@@ -461,4 +484,3 @@ p{
     background: transparent;
     color: #000;
 }
-
