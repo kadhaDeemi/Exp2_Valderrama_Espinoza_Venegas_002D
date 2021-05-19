@@ -93,7 +93,30 @@ padding-top: 7px;
     transition: all 400ms;
 }
 
+.Btones{    
+    text-decoration: none;
+    display: block; 
+    width: 130px;
+    padding: 10px 10px;
+    border: 2px solid #fff;
+    background-color: transparent;
+    font-size: 14px ;
+    font-weight: 400;
+    margin-top: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+    float: right;
+    color: #fff;
+    outline: none;
+    transition: all 400ms;
+}
+
 .login:hover{
+    background: #fff;
+    color: #000;
+}
+
+.Btones:hover{  
     background: #fff;
     color: #000;
 }
@@ -494,6 +517,35 @@ header label:hover {
     color: red;
     width: 300px;
     font-size: 0.8em;
-    margin-top: -5px;
-    margin-bottom: 5px;
+    margin-top: 8px;
+    margin-bottom: -8px;
+}
+
+.cajaApi{
+    background-color: papayawhip;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+}
+
+.cajaApi th{
+    color: #000000;
+
+}
+
+.cajaApi button{
+    background-color: goldenrod;
+    border: none;
+    color:#ffffff;
+    padding: 15px 32px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.api{
+    color:black;
+    text-align: center; 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 350%;
 }

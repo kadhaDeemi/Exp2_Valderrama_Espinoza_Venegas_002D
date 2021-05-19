@@ -69,3 +69,22 @@ function IniciarSesion(){
 		caja_traseraLogin.style.display = "none";	
 	}
 }
+
+
+$(document).ready(function()
+        {
+            $("#solicitar").click(function(){
+
+                $.get("https://mindicador.cl/api",
+                    function(data){
+                        
+                        $.each(data,function(i,item){
+                            $("#monedas").append("<tr><td>"+item.codigo+"</td><td>"+item.nombre +
+                            "</td><td>"+'$' +item.valor+ "</td><td>");
+                            
+
+                        });
+
+                    });
+            });
+        })

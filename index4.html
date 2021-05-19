@@ -40,6 +40,8 @@
                 rules: {
                     nombre: "required",
                     apellido: "required",
+                    fono: "required",
+                    fecha: "required",
                     email: {
                         required: true,
                         email: true
@@ -63,6 +65,11 @@
                 email: {
                     required: 'Ingresa tu correo electrónico',
                     email: 'Formato de correo no válido'
+                },
+                fono:{
+                    required: 'Ingrese un número de celular',
+                    minlength: 'Cantidad de digitos insuficiente'
+
                 },
                 contraseña: {
                     required: 'Ingresa una contraseña',
@@ -105,7 +112,7 @@
             <form action="index.html" id="Login" class="Formulario-Login">
                 <h2>Iniciar sesion</h2>
                 <input type="text" name="email" placeholder="Correo Electronico">
-                <input type="password" name="contraseña" placeholder="Contraseña">
+                <input type="password" name="contraseña" minlength="9" placeholder="Contraseña">
                 <button>Entrar</button>
             </form>
             <!--Formulario registro-->
@@ -114,6 +121,7 @@
                 <input type="text" name="nombre" minlength="3" placeholder="Nombres">
                 <input type="text" name="apellido" minlength="10" placeholder="Apellidos">
                 <input type="text" name="email" placeholder="Correo Electronico">
+                <input type="text" name="fono" minlength="9" placeholder="numero de Telefono">
                 <input type="password" id="contraseña" name="contraseña" minlength="9" placeholder="Contraseña">
                 <input type="password" name="contraseña2" minlength="9" placeholder="Confirmar Contraseña">
                 <button>Registrarse</button>
